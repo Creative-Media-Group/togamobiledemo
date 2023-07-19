@@ -25,3 +25,4 @@ class TogaClicker(toga.App):
 
 def main():
     return TogaClicker()
+main()
