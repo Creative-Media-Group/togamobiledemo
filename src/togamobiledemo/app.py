@@ -19,7 +19,7 @@ class TogaMobileDemo(toga.App):
         self.x = 0
         # btn1 = toga.Button(text="Clicker", on_press=self.click)
         btnnew = toga.Button(text="New Window", on_press=self.newwindow)
-        # self.text = toga.Label(text=f"You pressed this button {self.x} times.")
+        # self.text = toga.Label(text=self.text)
         # self.main_box.add(self.text)
         # self.main_box.add(btn1)
         self.main_box.add(btnnew)
