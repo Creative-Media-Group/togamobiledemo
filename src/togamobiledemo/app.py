@@ -28,12 +28,10 @@ class TogaMobileDemo(toga.App):
         self.main_window.show()
 
     def newwindow(self, widget):
-        bx = toga.Box()
-        lbl = toga.Label("2 Window")
-        bx.add(lbl)
-        self.second_window = toga.Window(title="New Window")
-        self.second_window.content = bx
-        self.second_window.show()
+        apptitle = toga.App().app_name
+        appauthor = toga.App().author
+        appdescription = toga.App().description
+        self.main_window.info_dialog(title=apptitle,message=f"App: {apptitle}\nAuthor: {appauthor}\nDescribtion: {appdescription}")
 
     def click(self, widget):
         self.x += 1
