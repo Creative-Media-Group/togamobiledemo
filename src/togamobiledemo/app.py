@@ -31,11 +31,20 @@ class TogaMobileDemo(toga.App):
         apptitle = toga.App().app_name
         appauthor = toga.App().author
         appdescription = toga.App().description
-        self.main_window.info_dialog(title=apptitle,message=f"App: {apptitle}\nAuthor: {appauthor}\nDescribtion: {appdescription}")
+        appwebsite = toga.App().home_page
+
+        self.main_window.info_dialog(
+            title=apptitle,
+            message=f"App: {apptitle}\nAuthor: {appauthor}\nDescribtion: {appdescription}\nWebsite: {appwebsite}",
+        )
 
     def click(self, widget):
         self.x += 1
         self.text = f"You pressed this button {self.x} times."
+
+    def abt(widget):
+        toga.App.about()
+        pass
 
 
 def main():
