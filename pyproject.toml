@@ -2,7 +2,7 @@
 [tool.briefcase]
 project_name = "Toga Mobile Demo"
 bundle = "de.cmg"
-version = "0.0.1"
+version = "0.0.2"
 url = "https://cmg.de/togamobiledemo"
 license = "MIT license"
 author = "tct123"
