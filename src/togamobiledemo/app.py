@@ -28,7 +28,7 @@ class TogaMobileDemo(toga.App):
         self.main_window.show()
 
     def newwindow(self, widget):
-        apptitle = toga.App().app_name
+        apptitle = toga.App().formal_name
         appauthor = toga.App().author
         appdescription = toga.App().description
         appwebsite = toga.App().home_page
