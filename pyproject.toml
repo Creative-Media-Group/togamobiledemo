@@ -11,7 +11,7 @@ author_email = "tct1234@protonmail.com"
 [tool.briefcase.app.togamobiledemo]
 formal_name = "Toga Mobile Demo"
 description = "A Toga Mobile Demo"
-long_description = """More details about the app should go here.
+long_description = """A quick demonstration what toga (Python-framework) can do in combination with briefcase.
 """
 icon = "src/togamobiledemo/resources/togamobiledemo"
 sources = [
