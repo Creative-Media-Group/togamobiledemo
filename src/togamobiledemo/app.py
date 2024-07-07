@@ -24,7 +24,7 @@ class TogaMobileDemo(toga.App):
         btn1 = toga.Button(text="Clicker", on_press=self.click)
         btnnew = toga.Button(text="New Window", on_press=self.newwindow)
         img = toga.ImageView(
-            image=toga.Image(path=f"{self.path}/resources/togamobiledemo.png")
+            image=toga.Image(src=f"{self.path}/resources/togamobiledemo.png")
         )
 
         # add widgets

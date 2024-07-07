@@ -4,7 +4,7 @@ project_name = "Toga Mobile Demo"
 bundle = "de.cmg"
 version = "0.0.2"
 url = "https://cmg.de/togamobiledemo"
-license = "MIT license"
+license.file = "LICENSE"
 author = "tct123"
 author_email = "tct1234@protonmail.com"
 
