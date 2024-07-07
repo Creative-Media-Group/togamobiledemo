@@ -1,6 +1,7 @@
 """
 A Toga Mobile Demo
 """
+
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
@@ -21,8 +22,16 @@ class TogaMobileDemo(toga.App):
         self.path = Paths().app
         self.x = 0
         # Widgets
-        btn1 = toga.Button(text="Clicker", on_press=self.click)
-        btnnew = toga.Button(text="New Window", on_press=self.newwindow)
+        btn1 = toga.Button(
+            text="Clicker",
+            on_press=self.click,
+            style=Pack(padding=10, flex=1),
+        )
+        btnnew = toga.Button(
+            text="New Window",
+            on_press=self.newwindow,
+            style=Pack(padding=10, flex=1),
+        )
         img = toga.ImageView(
             image=toga.Image(src=f"{self.path}/resources/togamobiledemo.png")
         )
@@ -51,7 +60,10 @@ class TogaMobileDemo(toga.App):
         del self.text
         self.x += 1
         self.text = f"You pressed this button {self.x} times."
-        self.maintext = toga.Label(text=self.text)
+        self.maintext = toga.Label(
+            text=self.text,
+            style=Pack(padding=10, flex=1),
+        )
         self.main_box.add(self.maintext)
 
     def abt(widget):
