@@ -147,5 +147,5 @@ requires = ["toga-android~=0.4.5"]
 
 # Web deployments
 [tool.briefcase.app.togamobiledemo.web]
-requires = ["toga-web~=0.4.1"]
+requires = ["toga-web~=0.4.5"]
 style_framework = "Shoelace v2.3"
