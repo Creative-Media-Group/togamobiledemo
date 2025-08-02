@@ -35,36 +35,36 @@ class TogaMobileDemo(toga.App):
         img = toga.ImageView(
             image=toga.Image(src=f"{self.path}/resources/togamobiledemo.png")
         )
-
-        # add widgets
-        self.main_box.add(btn1)
-        self.main_box.add(btnnew)
-        self.main_box.add(img)
-        # config
-        self.main_window = toga.MainWindow(title=self.formal_name)
-        self.main_window.content = self.main_box
-        self.main_window.show()
-
-    def newwindow(self, widget):
-        apptitle = toga.App().formal_name
-        appauthor = toga.App().author
-        appdescription = toga.App().description
-        appwebsite = toga.App().home_page
-        self.main_window.info_dialog(
-            title=apptitle,
-            message=f"App: {apptitle}\nAuthor: {appauthor}\nDescribtion: {appdescription}\nWebsite: {appwebsite}",
-        )
-
-    def click(self, widget):
-        self.text = ""
-        del self.text
-        self.x += 1
         self.text = f"You pressed this button {self.x} times."
         self.maintext = toga.Label(
             text=self.text,
             style=Pack(margin=10, flex=1),
         )
+        # add widgets
+        self.main_box.add(btn1)
+        self.main_box.add(btnnew)
+        self.main_box.add(img)
         self.main_box.add(self.maintext)
+        # config
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = self.main_box
+        self.main_window.show()
+
+    async def newwindow(self, widget):
+        apptitle = toga.App().formal_name
+        appauthor = toga.App().author
+        appdescription = toga.App().description
+        appwebsite = toga.App().home_page
+        await self.main_window.dialog(
+            toga.InfoDialog(
+                title=apptitle,
+                message=f"App: {apptitle}\nAuthor: {appauthor}\nDescribtion: {appdescription}\nWebsite: {appwebsite}",
+            )
+        )
+
+    def click(self, widget):
+        self.x += 1
+        self.maintext.text = f"You pressed this button {self.x} times."
 
     def abt(widget):
         toga.App.about()
