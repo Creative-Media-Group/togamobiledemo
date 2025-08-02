@@ -25,12 +25,12 @@ class TogaMobileDemo(toga.App):
         btn1 = toga.Button(
             text="Clicker",
             on_press=self.click,
-            style=Pack(padding=10, flex=1),
+            style=Pack(margin=10, flex=1),
         )
         btnnew = toga.Button(
             text="New Window",
             on_press=self.newwindow,
-            style=Pack(padding=10, flex=1),
+            style=Pack(margin=10, flex=1),
         )
         img = toga.ImageView(
             image=toga.Image(src=f"{self.path}/resources/togamobiledemo.png")
@@ -62,7 +62,7 @@ class TogaMobileDemo(toga.App):
         self.text = f"You pressed this button {self.x} times."
         self.maintext = toga.Label(
             text=self.text,
-            style=Pack(padding=10, flex=1),
+            style=Pack(margin=10, flex=1),
         )
         self.main_box.add(self.maintext)
 
